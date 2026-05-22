@@ -1,0 +1,147 @@
+/* CONTENEDOR DEL HERO */
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 102vh;
+    overflow: hidden;
+    margin-top: -100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+/* IMAGEN DE FONDO */
+.hero-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; /* un poco más grande para evitar bordes */
+    object-fit: cover;
+    filter: brightness(0.55);
+    transform: translateZ(0);
+    will-change: transform; /* optimización */
+    border-radius:0%; /* border rectos */
+   
+   
+}
+
+
+/* EFECTO PARALLAX DINÁMICO */
+
+/* CAPA OSCURA (overlay) */
+.hero-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* CONTENIDO */
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+    animation: fadeUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* TÍTULO */
+.hero-content h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    margin-top: 35%;
+}
+
+/* DESCRIPCIÓN */
+.hero-content p {
+    font-size: 20px;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* BOTÓN */
+.btn-hero {
+    display: inline-block;
+    background: #ff6600; /* Naranja fuerte */
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border-color: white;
+}
+
+.btn-hero:hover {
+    background: #ff7f2a;
+    transform: scale(1.05);
+}
+
+/* ANIMACIÓN MODERNA */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: t
+    }
+}
+
+/* TÍTULO CON CURSOR */
+#typing-title {
+    font-size: 55px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    /*border-right: 3px solid #080808; /* el cursor */
+    width: fit-content;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* centra vertical */
+    align-items: center;         /* centra horizontal */
+    text-align: center;          /* centra el texto */
+    height: 100%;                /* importante */
+    width: 100%;
+    
+}
+
+/* Animación del cursor 
+@keyframes cursorBlink {
+    0% { border-color: transparent; }
+    50% { border-color: #ff6600; }
+    100% { border-color: transparent; }
+} 
+    */
+
+#typing-title.typing-finished {
+    border-right: 3px solid transparent;
+    animation: cursorBlink 0.7s infinite;
+}
+
+.hero-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.6)
+  );
+}
+

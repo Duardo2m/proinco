@@ -1,0 +1,562 @@
+body {
+    margin: 0;
+    font-family: Inter, system-ui;
+    line-height: 1.6
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+    
+}
+
+nav ul {
+    display: flex;
+    align-items: center;   /* 🔥 Alinea verticalmente TODO el menú */
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 300
+}
+
+.social-icons1 {
+    margin-top: 6px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-right: 220px;
+    margin-left: 10px;
+}
+
+
+.social-icons1 a {
+    color: var(--muted);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    margin-left: 8px;
+}
+
+.social-icons1 a:hover {
+    color: var(--accent)
+}
+
+/* cambia color letra de INICIO, SERVVICIOS , etc */
+nav ul li a:hover {  
+    /* color: var(--accent); */
+    transform: scale(1.05);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+nav ul {
+    display: flex;
+    align-items: center;   /* 🔥 Alinea verticalmente TODO el menú */
+}
+
+
+nav ul li {
+    display: flex;
+    align-items: center;   /* 🔥 Asegura que cada item individual también esté centrado */
+}
+
+/*  ************** Nuevas lines de codigo: ******************/
+/* Secciones generales */
+.section {
+  width: 100%;
+  min-height: 100vh; /* cada sección ocupa toda la altura visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* Fondo claro */
+.bg-light {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+/* Fondo oscuro */
+.bg-dark {
+  background-color: #111111ec;
+}
+
+/* Contenido centrado dentro de la sección */
+.section .content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+/* Títulos Servicios, Nosotros, Portfolio etc */
+.section h1, .section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+  color:#0b1220;
+}
+
+.section p {
+  font-size: 1.2rem;
+}
+
+/* Efecto hover en títulos */
+.section h2:hover {
+  color: #111;
+}
+
+
+/*Response */
+@media (max-width: 768px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  header .logo {
+    font-size: 22px;
+  }
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* espacio entre los botones */
+}
+
+/* Elimina la separación gigante del botón Contacto */
+nav ul li a.cta {
+    margin-left: 0 !important;
+}
+
+/*Alinear botones wsp y contacto */
+
+/* Boton Contacto Header */
+.cta {
+    background: #FF4500;
+    padding: 10px 16px;
+    border-radius: 10px;
+     color: white !important;
+    font-weight: 700;
+    border: 1px solid #ccc;
+      text-decoration: none; /* <-- 🔥 QUITA EL SUBRAYADO */
+}
+
+.header-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* misma altura para ambos */
+    padding: 0 20px; /* uniforme */
+    line-height: 1; /* evita saltos verticales */
+    
+}
+
+.whatsapp-btn i {
+    margin-right: 1px;
+    display: inline-block;
+}
+
+/*Botón WhatsApp */
+.whatsapp-btn {
+  background: #25D366;
+  color: white !important;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  transition: 0.3s ease;
+  border: 1px solid #ccc;
+  margin-left: -15px;
+  text-decoration: none; 
+}
+
+/* Contenedor del menú */
+.full-header .nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family:  "Noto Sans", sans-serif;
+}
+.logo-area {
+    background: none;        /* color naranja */
+    padding: 28px 45px;         /* 🔥 más alto y ancho */
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* Ajuste del logo */
+.logo img {
+    height: 45px;               /* 🔥 tamaño del logo arriba y abajo */
+    width: auto;
+}
+
+/* Asegura que el header se vea sin cortes */
+header {
+    height: 90px; /* puedes ajustar a 80–100 */
+    padding: 0 60px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    font-family:  "Noto Sans", sans-serif;
+}
+
+header .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centra verticalmente todo el contenido */
+}
+header nav ul {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 40px; /* ESPACIADO LATERAL DEL HEADER */
+}
+
+.header-buttons {
+    margin-left: auto; /* Asegura que los botones se peguen más a la derecha */
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Asegura que el logo no empuje hacia arriba */
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 143, 15, 0.836);
+    transform: scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(12);
+        opacity: 0;
+    }
+}
+
+
+
+/* Codigo CSS para el header */
+/* ------------------------------ */
+/*      HEADER APPLE PREMIUM      */
+/* ------------------------------ */
+
+
+/*
+.full-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+
+    /*background: linear-gradient(90deg, #33302e, #37383a, #1a1d22);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    align-items: center;
+    padding: 14px 0;
+
+    transition: 0.3s ease;
+    animation: headerFade 0.7s ease forwards;
+}
+*/
+@keyframes headerFade {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*
+.full-header.scrolled {
+    background: rgba(43, 41, 41, 0.6);
+    padding: 9px 0;
+}
+*/
+.full-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 9999;
+}
+
+/* Fondo sólido cuando se hace scroll */
+.full-header.scrolled {
+    background: #0f0f0f; /* color sólido (edítalo a tu tono) */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+
+
+/* Contenedor */
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Logo */
+
+.logo img {
+    height: 52px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------------------ */
+/*     REDES (más separación)     */
+/* ------------------------------ */
+
+
+.social-icons1 a {
+    font-size: 25px;
+    color: white;
+    opacity: 0.82;
+    transition: 0.3s ease;
+}
+
+.social-icons1 a:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* ------------------------------ */
+/*             MENÚ               */
+/* ------------------------------ */
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu a {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: 0.3s ease;
+}
+
+/* Línea animada */
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(248, 23, 23);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------ */
+/*           BOTONES              */
+/* ------------------------------ */
+
+.whatsapp-btn,
+.cta {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: 0.25s ease;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white !important;
+}
+
+.cta {
+    background: linear-gradient(135deg, #ee430f, #ff941a);
+    color: white !important;
+    box-shadow: 0 0 12px rgba(255, 140, 0, 0.32);
+}
+
+.whatsapp-btn:hover,
+.cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.18);
+}
+
+/* ------------------------------ */
+/*     HOVER MAGNÉTICO MODERNO    */
+/* ------------------------------ */
+
+.menu a,
+.social-icons1 a,
+.logo img,
+.whatsapp-btn,
+.cta {
+    transition: transform 0.25s ease;
+}
+
+.menu a:hover,
+.social-icons1 a:hover,
+.whatsapp-btn:hover,
+.cta:hover,
+.logo img:hover {
+    transform: translateY(-3px);
+}
+
+/* ANIMACIÓN DEL TEXTO DEL HERO */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1.2s ease-out forwards; /* ⬅️ ANIMACIÓN */
+}
+
+/* --------------------------------------------- */
+/*                MENU RESPONSIVE                */
+/* --------------------------------------------- */
+
+/* Botón hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.hamburger:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* ====== MÓVIL ====== */
+@media (max-width: 900px) {
+
+    /* Logo más pequeño */
+    .logo img {
+        height: 42px !important;
+    }
+
+    /* Ocultar redes sociales */
+    .social-icons1 {
+        display: none !important;
+    }
+
+    /* Mostrar hamburguesa */
+    .hamburger {
+        display: block;
+    }
+
+    /* Menú se hace vertical */
+    .menu ul {
+        position: fixed;
+        top: 85px;
+        right: 0;
+        height: calc(100vh - 85px);
+        width: 260px;
+        background: rgba(20,20,20,0.96);
+        backdrop-filter: blur(6px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 25px;
+        gap: 25px;
+        border-left: 1px solid rgba(255,255,255,0.08);
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+        z-index: 9999;
+    }
+
+    /* Cuando se despliega */
+    .menu ul.show {
+        transform: translateX(0);
+    }
+
+    .menu a {
+        font-size: 20px !important;
+    }
+
+    /* Centrar header */
+    .header-container {
+        padding: 5px 20px !important;
+    }
+}
+
+/* ====== EXTRA — PANTALLAS MUY PEQUEÑAS ====== */
+@media (max-width: 480px) {
+
+    .logo img {
+        height: 36px !important;
+    }
+
+    .menu a {
+        font-size: 18px !important;
+    }
+}
+.menu ul .header-buttons {
+    margin-top: 0 !important;
+    /* elimina separación vertical */
+    width: 100%;
+    /* ocupa todo el ancho como los li */
+    display: flex;
+    justify-content: flex-start;
+    /* alineado igual que los textos */
+}
+
+.menu ul .header-buttons a.whatsapp-btn {
+    margin: 0 !important;
+    width: auto;
+    font-size: 18px;
+}

@@ -1,0 +1,53 @@
+/* CONTENEDOR GENERAL */
+.carousel-wrapper {
+  width: 100%;
+  background: #ffffff; /* 🔥 Fondo blanco */
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARRUSEL */
+.logo-carousel {
+  width: 90%;
+  overflow: hidden;
+}
+
+/* TRACK DEL CARRUSEL */
+.logo-track {
+  display: flex;
+  width: calc(250px * 22);
+  animation: scroll 30s linear infinite;
+  gap: 40px;
+}
+
+/* LOGOS */
+.logo-carousel img {
+  height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: .3s;
+}
+
+.logo-carousel img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ANIMACIÓN */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 11)); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .logo-carousel img { height: 45px; }
+}
+
+@media (max-width: 480px) {
+  .logo-carousel img { height: 35px; }
+}
