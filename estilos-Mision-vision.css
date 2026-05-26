@@ -1,0 +1,116 @@
+/* WRAPPER con imagen de fondo */
+.mv-section {
+    position: relative;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+/* Imagen de fondo con overlay oscuro — mismo patrón que .contact-bg */
+.mv-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://blog.deacero.com/hs-fs/hubfs/autoconstruir-o-contratar-constructora-2.jpg?width=1999&name=autoconstruir-o-contratar-constructora-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* efecto parallax suave */
+    filter: brightness(0.25);     /* oscurece la imagen */
+    z-index: 0;
+}
+
+/* Todo el contenido encima del fondo */
+.mv-content {
+    position: relative;
+    z-index: 1;
+}
+
+.mv-label {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #f59e0b;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.mv-heading {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 64px;
+}
+
+.mv-heading span { color: #f59e0b; }
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.mv-card {
+    background: rgba(10, 10, 10, 0.75);   /* fondo semitransparente */
+    backdrop-filter: blur(10px);            /* efecto vidrio */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 48px 40px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.mv-card:hover {
+    background: rgba(20, 20, 20, 0.85);
+    transform: translateY(-4px);
+}
+
+ .mv-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    font-size: 24px;
+    color: #f59e0b;
+} 
+/* .mv-card-icon i {
+    font-size: 24px;
+    color: #f59e0b;
+} */
+
+.mv-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.mv-card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 36px; height: 2px;
+    background: #f59e0b;
+    border-radius: 2px;
+}
+
+.mv-card-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #aaaaaa;
+    font-weight: 300;
+     text-align: justify;
+}
+
+@media (max-width: 640px) {
+    .mv-grid { grid-template-columns: 1fr; }
+    .mv-card { padding: 32px 24px; }
+}
